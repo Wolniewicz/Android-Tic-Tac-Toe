@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" 
+	android:background="@drawable/background">
+	
+	<com.google.ads.AdView android:id="@+id/adView"
+	                         android:layout_width="wrap_content"
+	                         android:layout_height="wrap_content"
+	                         ads:adUnitId="a14eaaffc9c0263"
+	                         ads:adSize="BANNER"
+	                         ads:loadAdOnCreate="true"
+	                         android:layout_alignParentTop="true"/>
+	
+	
+	<RelativeLayout android:layout_width="fill_parent" android:id="@+id/mRelativeLayout" android:layout_height="wrap_content" 
+android:layout_below="@+id/adView">
+
+	<Button android:id="@+id/play"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:text="Play!"
+		android:onClick="onPlayClicked" />
+
+	<RadioGroup android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:id="@+id/QueGroup1"
+		android:layout_below="@+id/play"
+		android:layout_gravity="center_horizontal">
+		
+		
+		<RadioButton android:checked="true" android:textColor="#000"
+			android:id="@+id/xFirst" android:text="X First (X is always first if VS Comp)"/>
+
+		<RadioButton android:checked="false" android:textColor="#000"
+			android:id="@+id/oFirst" android:text="O First"/>
+	</RadioGroup>
+	
+	
+	<RadioGroup android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:id="@+id/QueGroup2"
+		android:layout_below="@+id/QueGroup1"
+		android:layout_gravity="center_horizontal">
+		
+		<RadioButton android:checked="true" android:textColor="#000"
+			android:id="@+id/compOn" android:text="VS Computer"/>
+
+		<RadioButton android:checked="false" android:textColor="#000"
+			android:id="@+id/compOff" android:text="VS Human (Hot-seat)"/>
+	</RadioGroup>
+	
+		<RadioGroup android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:id="@+id/QueGroup3"
+		android:layout_below="@+id/QueGroup2"
+		android:layout_gravity="center_horizontal">
+		
+		
+		<RadioButton android:checked="true" android:textColor="#000"
+			android:id="@+id/easy" android:text="Easy Comp (Harder levels being made)"/>
+
+		
+	</RadioGroup>
+
+</RelativeLayout>
+</LinearLayout>

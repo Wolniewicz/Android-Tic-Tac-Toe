@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+ package="com.gametictactoe" android:versionCode="5" android:versionName="1.35">
+<uses-sdk android:minSdkVersion="4"/>
+
+	<application android:icon="@drawable/icon" android:label="@string/app_name">
+		<activity android:name="com.gametictactoe.Main" 
+		android:label="@string/app_name"
+	 	android:screenOrientation="portrait"
+ 	 	android:theme="@android:style/Theme.NoTitleBar">
+			<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+  
+        <activity
+         android:name="com.gametictactoe.Board"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait">
+        
+        </activity>
+        
+            <activity
+       android:name="com.gametictactoe.LogicalBoard"
+      
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:theme="@android:style/Theme.NoTitleBar">
+        </activity>
+        
+<activity android:name="com.google.ads.AdActivity"
+                  android:configChanges="keyboard|keyboardHidden|orientation"/>
+
+
+    </application>
+     <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    
+</manifest>
